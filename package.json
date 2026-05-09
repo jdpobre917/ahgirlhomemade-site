@@ -1,0 +1,9 @@
+{
+  "name": "ahgirlhomemade-site",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Ah Girl Homemade — single-jar sambal lander with Stripe checkout.",
+  "dependencies": {
+    "stripe": "^14.0.0"
+  }
+}

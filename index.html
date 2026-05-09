@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ah Girl Homemade — Authentic Malaysian Sambal</title>
+<meta name="description" content="Slow-cooked Malaysian sambal, made by Wern in small batches. Spicy, smokey, savoury — seriously sedap. Bottled in the UK, posted to your door.">
+
+<meta property="og:title" content="Ah Girl Homemade — Authentic Malaysian Sambal">
+<meta property="og:description" content="Slow-cooked Malaysian sambal, bottled by Wern. Spicy, smokey, savoury — seriously sedap.">
+<meta property="og:image" content="https://ahgirlhomemade.zscreativeco.com/assets/jar.jpg">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ahgirlhomemade.zscreativeco.com/">
+<link rel="canonical" href="https://ahgirlhomemade.zscreativeco.com/">
+
+<link rel="icon" href="assets/logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --jar:#7A1E1E;
+  --jar-deep:#4A0E0E;
+  --flame:#E04A1A;
+  --ember:#F5A623;
+  --gold:#E8B530;
+  --cream:#FBF3E4;
+  --paper:#FDF8EC;
+  --charcoal:#1F0F08;
+  --ink:#3B2418;
+  --muted:#7A5A48;
+  --line:rgba(122,30,30,0.18);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:'Inter',sans-serif;
+  font-weight:400;
+  line-height:1.6;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block;}
+
+/* ---------- nav ---------- */
+nav{
+  position:sticky;top:0;z-index:100;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:18px 40px;
+  background:rgba(253,248,236,0.92);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--line);
+}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--jar);}
+.brand img{width:42px;height:42px;border-radius:50%;}
+.brand-text{display:flex;flex-direction:column;line-height:1.1;}
+.brand-name{font-family:'Playfair Display',serif;font-size:18px;font-weight:600;}
+.brand-sub{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--muted);}
+.nav-links{display:flex;gap:28px;align-items:center;}
+.nav-links a{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--ink);text-decoration:none;font-weight:500;transition:color .2s;}
+.nav-links a:hover{color:var(--jar);}
+.nav-cta{
+  background:var(--jar);color:var(--cream)!important;
+  padding:10px 22px;border-radius:4px;
+  letter-spacing:2px;
+  transition:background .2s;
+}
+.nav-cta:hover{background:var(--jar-deep);}
+@media(max-width:720px){
+  nav{padding:14px 20px;}
+  .nav-links a:not(.nav-cta){display:none;}
+}
+
+/* ---------- hero ---------- */
+.hero{
+  position:relative;
+  min-height:88vh;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  align-items:center;
+  background:radial-gradient(ellipse at 30% 50%,rgba(224,74,26,0.08),transparent 60%),var(--paper);
+  overflow:hidden;
+}
+.hero-text{padding:60px 60px 60px 64px;}
+.hero-eyebrow{
+  display:inline-flex;align-items:center;gap:10px;
+  font-size:10px;letter-spacing:4px;text-transform:uppercase;
+  color:var(--flame);font-weight:600;margin-bottom:24px;
+}
+.hero-eyebrow::before{content:'';width:32px;height:1px;background:var(--flame);}
+h1{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(40px,6vw,72px);
+  font-weight:600;
+  line-height:1.02;
+  color:var(--charcoal);
+  letter-spacing:-1px;
+  margin-bottom:22px;
+}
+h1 em{font-style:italic;color:var(--jar);font-weight:400;}
+.hero-lede{
+  font-size:18px;color:var(--muted);
+  max-width:480px;margin-bottom:36px;line-height:1.65;
+}
+.hero-tags{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:36px;}
+.tag{
+  background:var(--cream);
+  border:1px solid var(--line);
+  color:var(--jar);
+  padding:6px 14px;border-radius:999px;
+  font-size:11px;letter-spacing:1.5px;text-transform:uppercase;font-weight:500;
+}
+.hero-cta-row{display:flex;gap:14px;flex-wrap:wrap;}
+.btn{
+  display:inline-flex;align-items:center;gap:10px;
+  padding:16px 32px;border-radius:4px;
+  font-family:'Inter',sans-serif;font-size:12px;font-weight:600;
+  letter-spacing:2.5px;text-transform:uppercase;
+  text-decoration:none;cursor:pointer;border:none;
+  transition:all .2s;
+}
+.btn-primary{background:var(--jar);color:var(--cream);}
+.btn-primary:hover{background:var(--jar-deep);transform:translateY(-1px);}
+.btn-ghost{background:transparent;border:1px solid var(--jar);color:var(--jar);}
+.btn-ghost:hover{background:var(--jar);color:var(--cream);}
+
+.hero-image{
+  position:relative;
+  height:88vh;
+  background:url('assets/jar.jpg') center/cover no-repeat;
+}
+.hero-image::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(90deg,var(--paper) 0%,transparent 25%);
+}
+
+@media(max-width:900px){
+  .hero{grid-template-columns:1fr;min-height:auto;}
+  .hero-text{padding:48px 28px 32px;order:2;}
+  .hero-image{order:1;height:60vh;}
+  .hero-image::after{background:linear-gradient(180deg,transparent 60%,var(--paper));}
+}
+
+/* ---------- founder ---------- */
+.section{padding:100px 40px;max-width:1200px;margin:0 auto;}
+.section-eyebrow{
+  display:flex;align-items:center;gap:12px;
+  font-size:10px;letter-spacing:4px;text-transform:uppercase;
+  color:var(--flame);font-weight:600;margin-bottom:18px;
+}
+.section-eyebrow::before{content:'';width:24px;height:1px;background:var(--flame);}
+h2{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(32px,4.5vw,52px);
+  font-weight:600;
+  line-height:1.1;
+  color:var(--charcoal);
+  letter-spacing:-0.5px;
+  margin-bottom:24px;
+}
+h2 em{font-style:italic;color:var(--jar);}
+
+.founder{
+  display:grid;
+  grid-template-columns:1fr 1.2fr;
+  gap:60px;
+  align-items:center;
+}
+.founder-img{
+  position:relative;
+  border-radius:6px;
+  overflow:hidden;
+  box-shadow:0 30px 60px -20px rgba(74,14,14,0.35);
+}
+.founder-img::after{
+  content:'';position:absolute;top:14px;left:14px;right:-14px;bottom:-14px;
+  border:2px solid var(--gold);border-radius:6px;z-index:-1;
+}
+.founder-img img{aspect-ratio:4/3;object-fit:cover;}
+.founder-quote{font-family:'Playfair Display',serif;font-size:18px;font-style:italic;color:var(--muted);line-height:1.7;margin-bottom:18px;}
+.founder p{margin-bottom:14px;color:var(--ink);}
+.founder p:last-child{color:var(--jar);font-weight:500;}
+.founder-sign{font-family:'Playfair Display',serif;font-style:italic;font-size:22px;color:var(--jar);margin-top:8px;}
+@media(max-width:900px){
+  .founder{grid-template-columns:1fr;gap:32px;}
+  .founder-img::after{display:none;}
+}
+
+/* ---------- product / buy ---------- */
+.buy-section{
+  background:linear-gradient(180deg,var(--paper),var(--cream));
+  padding:100px 40px;
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+}
+.buy-grid{
+  max-width:1100px;margin:0 auto;
+  display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;
+}
+.buy-img-wrap{position:relative;}
+.buy-img-wrap img{
+  border-radius:6px;
+  box-shadow:0 40px 80px -20px rgba(74,14,14,0.4);
+}
+.buy-badge{
+  position:absolute;top:-18px;right:-18px;
+  width:110px;height:110px;border-radius:50%;
+  background:var(--flame);color:var(--cream);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  font-family:'Playfair Display',serif;font-size:14px;font-weight:600;
+  text-align:center;line-height:1.1;
+  transform:rotate(-12deg);
+  box-shadow:0 12px 24px -8px rgba(224,74,26,0.5);
+}
+.buy-badge em{font-style:italic;font-size:11px;display:block;margin-top:4px;font-weight:400;}
+
+.buy-info h2{margin-bottom:14px;}
+.buy-tagline{color:var(--muted);font-size:17px;margin-bottom:26px;line-height:1.6;}
+
+.price-row{
+  display:flex;align-items:baseline;gap:14px;
+  padding:20px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  margin-bottom:24px;
+}
+.price{font-family:'Playfair Display',serif;font-size:42px;font-weight:600;color:var(--jar);}
+.price-meta{color:var(--muted);font-size:14px;}
+
+.qty-row{display:flex;align-items:center;gap:18px;margin-bottom:26px;}
+.qty-label{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);font-weight:500;}
+.qty-stepper{display:flex;align-items:center;border:1px solid var(--line);border-radius:4px;overflow:hidden;}
+.qty-btn{
+  width:42px;height:42px;background:var(--paper);border:none;
+  font-size:18px;color:var(--jar);cursor:pointer;font-weight:500;
+  transition:background .15s;
+}
+.qty-btn:hover{background:var(--cream);}
+.qty-btn:disabled{opacity:0.35;cursor:not-allowed;}
+.qty-display{
+  min-width:54px;text-align:center;
+  font-family:'Playfair Display',serif;font-size:20px;font-weight:600;
+  color:var(--charcoal);
+}
+
+.buy-features{list-style:none;margin-bottom:30px;}
+.buy-features li{
+  position:relative;padding-left:22px;margin-bottom:8px;
+  font-size:14px;color:var(--ink);
+}
+.buy-features li::before{
+  content:'';position:absolute;left:0;top:9px;
+  width:8px;height:8px;background:var(--flame);border-radius:50%;
+}
+
+.buy-btn-row{display:flex;gap:12px;flex-wrap:wrap;}
+.btn-buy{
+  background:var(--jar);color:var(--cream);
+  padding:18px 36px;font-size:13px;
+  flex:1;min-width:240px;justify-content:center;
+}
+.btn-buy:disabled{opacity:0.6;cursor:wait;}
+.buy-fineprint{
+  margin-top:18px;font-size:12px;color:var(--muted);
+}
+
+@media(max-width:900px){
+  .buy-grid{grid-template-columns:1fr;gap:48px;}
+  .buy-badge{width:90px;height:90px;font-size:12px;top:-12px;right:-12px;}
+}
+
+/* ---------- ingredients ---------- */
+.ingredients-block{
+  max-width:900px;margin:0 auto;
+  background:var(--paper);
+  border:1px solid var(--line);
+  padding:48px 56px;border-radius:6px;
+  position:relative;
+}
+.ingredients-block::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:4px;
+  background:linear-gradient(90deg,var(--jar),var(--flame),var(--gold),var(--flame),var(--jar));
+}
+.ingredients-block h3{
+  font-family:'Playfair Display',serif;font-size:24px;
+  color:var(--jar);margin-bottom:14px;
+}
+.ingredients-list{
+  font-size:15px;line-height:1.8;color:var(--ink);
+  margin-bottom:24px;
+}
+.ingredients-list strong{color:var(--jar);font-weight:600;}
+.allergen-note{
+  background:var(--cream);border-left:3px solid var(--flame);
+  padding:14px 18px;font-size:13px;color:var(--muted);font-style:italic;
+}
+
+/* ---------- usage / how to ---------- */
+.howto-section{padding:100px 40px;}
+.howto-grid{
+  max-width:1100px;margin:0 auto;
+  display:grid;grid-template-columns:repeat(4,1fr);gap:24px;
+}
+.howto-card{
+  background:var(--paper);
+  border:1px solid var(--line);
+  padding:32px 24px;border-radius:6px;
+  transition:transform .25s,box-shadow .25s;
+}
+.howto-card:hover{transform:translateY(-4px);box-shadow:0 20px 40px -12px rgba(74,14,14,0.18);}
+.howto-num{
+  font-family:'Playfair Display',serif;
+  font-size:36px;font-weight:600;
+  color:var(--flame);font-style:italic;
+  line-height:1;margin-bottom:14px;
+}
+.howto-card h4{
+  font-family:'Playfair Display',serif;
+  font-size:20px;color:var(--charcoal);
+  margin-bottom:10px;font-weight:600;
+}
+.howto-card p{font-size:14px;color:var(--muted);line-height:1.6;}
+@media(max-width:900px){
+  .howto-grid{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:560px){
+  .howto-grid{grid-template-columns:1fr;}
+}
+
+/* ---------- serving / lifestyle ---------- */
+.serving{
+  position:relative;
+  padding:140px 40px;
+  background:url('assets/serving.jpg') center/cover no-repeat;
+  background-attachment:fixed;
+  text-align:center;
+}
+.serving::before{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(31,15,8,0.5),rgba(74,14,14,0.7));
+}
+.serving-inner{position:relative;max-width:680px;margin:0 auto;color:var(--cream);}
+.serving h2{color:var(--cream);margin-bottom:18px;}
+.serving h2 em{color:var(--gold);}
+.serving p{font-size:18px;line-height:1.7;color:var(--cream);opacity:0.92;}
+@media(max-width:720px){
+  .serving{background-attachment:scroll;padding:90px 28px;}
+}
+
+/* ---------- footer ---------- */
+footer{
+  background:var(--jar-deep);
+  color:var(--cream);
+  padding:60px 40px 28px;
+  text-align:center;
+}
+footer img{margin:0 auto 20px;width:60px;height:60px;border-radius:50%;}
+.footer-name{font-family:'Playfair Display',serif;font-size:24px;font-weight:600;margin-bottom:6px;}
+.footer-tag{font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:30px;}
+.footer-links{display:flex;justify-content:center;gap:28px;margin-bottom:30px;flex-wrap:wrap;}
+.footer-links a{color:var(--cream);text-decoration:none;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;opacity:0.75;transition:opacity .2s;}
+.footer-links a:hover{opacity:1;}
+.footer-credit{
+  border-top:1px solid rgba(251,243,228,0.15);
+  padding-top:20px;
+  font-size:11px;letter-spacing:2px;text-transform:uppercase;
+  color:var(--cream);opacity:0.5;
+}
+.footer-credit a{color:var(--gold);text-decoration:none;font-weight:500;opacity:1;}
+.footer-credit a:hover{text-decoration:underline;}
+
+/* ---------- toast ---------- */
+.toast{
+  position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(120%);
+  background:var(--jar-deep);color:var(--cream);
+  padding:14px 22px;border-radius:6px;
+  font-size:13px;font-weight:500;
+  box-shadow:0 12px 28px rgba(0,0,0,0.25);
+  transition:transform .3s ease;
+  z-index:200;
+  max-width:90%;
+}
+.toast.show{transform:translateX(-50%) translateY(0);}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="./" class="brand">
+    <img src="assets/logo.jpg" alt="Ah Girl Homemade">
+    <div class="brand-text">
+      <span class="brand-name">Ah Girl</span>
+      <span class="brand-sub">Homemade</span>
+    </div>
+  </a>
+  <div class="nav-links">
+    <a href="#story">Story</a>
+    <a href="#how-to">How to use</a>
+    <a href="#buy" class="nav-cta">Buy a jar</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-text">
+    <span class="hero-eyebrow">Authentic Malaysian Sambal</span>
+    <h1>Slow-cooked.<br>Seriously <em>sedap.</em></h1>
+    <p class="hero-lede">A bold, handcrafted chilli paste made the way Wern's family makes it back home — dried chillies, aromatics, and a long, patient simmer. Bottled in small batches, posted to your door.</p>
+    <div class="hero-tags">
+      <span class="tag">Spicy</span>
+      <span class="tag">Smokey</span>
+      <span class="tag">Savoury</span>
+    </div>
+    <div class="hero-cta-row">
+      <a href="#buy" class="btn btn-primary">Get your jar</a>
+      <a href="#story" class="btn btn-ghost">Meet Wern</a>
+    </div>
+  </div>
+  <div class="hero-image" role="img" aria-label="Jar of Ah Girl Homemade Sambal"></div>
+</section>
+
+<section class="section" id="story">
+  <div class="founder">
+    <div class="founder-img">
+      <img src="assets/founder.jpg" alt="Wern, founder of Ah Girl Homemade">
+    </div>
+    <div>
+      <span class="section-eyebrow">Meet the maker</span>
+      <h2>Wern &amp; her family's <em>favourite sambal</em></h2>
+      <p class="founder-quote">"In my home in Malaysia, sambal isn't just a sauce — it's the heartbeat of every meal."</p>
+      <p>I grew up surrounded by the intoxicating aroma of exotic ingredients being transformed into slow-cooked magic. Through many years of trial and error, I've perfected a recipe that captures the soul of those Malaysian family feasts.</p>
+      <p>My family insisted it was a secret too good to keep, and they're the ones who convinced me to bottle it up — so you could have a little taste of our Malaysian home in your own kitchen.</p>
+      <p>I'm a firm believer that there's no dish on earth that a spoonful of this can't fix.</p>
+      <p class="founder-sign">— Wern</p>
+    </div>
+  </div>
+</section>
+
+<section class="buy-section" id="buy">
+  <div class="buy-grid">
+    <div class="buy-img-wrap">
+      <img src="assets/jar.jpg" alt="Ah Girl Homemade Sambal jar">
+      <div class="buy-badge">Small<br>batch<em>seriously sedap</em></div>
+    </div>
+    <div class="buy-info">
+      <span class="section-eyebrow">The jar</span>
+      <h2>Ah Girl <em>Sambal</em></h2>
+      <p class="buy-tagline">Authentic Malaysian chilli paste. Spicy, smokey, savoury — and ready for everything from fried rice to roast chicken.</p>
+
+      <div class="price-row">
+        <span class="price" id="price-display">£8.50</span>
+        <span class="price-meta">200g jar &middot; UK shipping £3.95</span>
+      </div>
+
+      <div class="qty-row">
+        <span class="qty-label">Quantity</span>
+        <div class="qty-stepper">
+          <button class="qty-btn" id="qty-minus" aria-label="Decrease quantity">&minus;</button>
+          <span class="qty-display" id="qty-display">1</span>
+          <button class="qty-btn" id="qty-plus" aria-label="Increase quantity">+</button>
+        </div>
+      </div>
+
+      <ul class="buy-features">
+        <li>Handmade in small batches by Wern</li>
+        <li>No preservatives, no shortcuts</li>
+        <li>Posted UK-wide, tracked delivery</li>
+        <li>Free shipping on orders over £25</li>
+      </ul>
+
+      <div class="buy-btn-row">
+        <button class="btn btn-buy" id="buy-btn">Checkout with Stripe</button>
+      </div>
+      <p class="buy-fineprint">Secure checkout via Stripe. Your card details never touch this site.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="ingredients-block">
+    <span class="section-eyebrow">What's inside</span>
+    <h3>Ingredients</h3>
+    <p class="ingredients-list">
+      <strong>Dried chilli</strong> &middot; rapeseed oil &middot; <strong>shrimp paste (crustaceans)</strong> &middot; onion &middot; garlic &middot; sugar &middot; salt &middot; lime juice.
+    </p>
+    <div class="allergen-note">
+      Small batch &amp; handcrafted. While we take every care, our kitchen handles nuts, gluten, and dairy. Once opened, refrigerate and use within 4 weeks.
+    </div>
+  </div>
+</section>
+
+<section class="howto-section" id="how-to">
+  <div style="max-width:1100px;margin:0 auto 40px;text-align:center;">
+    <span class="section-eyebrow" style="justify-content:center;">How to sambal</span>
+    <h2>One spoon, <em>a hundred dinners.</em></h2>
+  </div>
+  <div class="howto-grid">
+    <div class="howto-card">
+      <div class="howto-num">01</div>
+      <h4>Drizzle</h4>
+      <p>A tablespoon over a fried, scrambled, or boiled egg. Instant breakfast upgrade.</p>
+    </div>
+    <div class="howto-card">
+      <div class="howto-num">02</div>
+      <h4>Mix</h4>
+      <p>Stir 1–2 tbsp into steaming hot rice or noodles. Or stir-fry it with grains for a charred kick.</p>
+    </div>
+    <div class="howto-card">
+      <div class="howto-num">03</div>
+      <h4>Stir-fry</h4>
+      <p>Drop into hot oil, sauté 30 seconds until fragrant, then toss in protein or veggies.</p>
+    </div>
+    <div class="howto-card">
+      <div class="howto-num">04</div>
+      <h4>Dip</h4>
+      <p>Spoon onto fried chicken, satay, or anything that needs a serious spicy kick.</p>
+    </div>
+  </div>
+</section>
+
+<section class="serving">
+  <div class="serving-inner">
+    <span class="section-eyebrow" style="color:var(--gold);justify-content:center;">From our home to yours</span>
+    <h2>There's no dish on earth a spoonful of this <em>can't fix.</em></h2>
+    <p>Bottled with the love of a family recipe, by a one-woman kitchen in the UK.</p>
+  </div>
+</section>
+
+<footer>
+  <img src="assets/logo.jpg" alt="Ah Girl Homemade">
+  <div class="footer-name">Ah Girl Homemade</div>
+  <div class="footer-tag">Authentic Malaysian Sambal</div>
+  <div class="footer-links">
+    <a href="https://instagram.com/ahgirlhomemade" target="_blank" rel="noopener">Instagram</a>
+    <a href="#story">Story</a>
+    <a href="#buy">Buy a jar</a>
+    <a href="#how-to">How to use</a>
+  </div>
+  <div class="footer-credit">
+    Site by <a href="https://zscreativeco.com" target="_blank" rel="noopener">Z's Creative Co.</a>
+  </div>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<script>
+(function(){
+  const PRICE_PENCE = 850;          // £8.50 — placeholder, swap before launch
+  const MAX_QTY = 12;
+  const qtyDisplay = document.getElementById('qty-display');
+  const priceDisplay = document.getElementById('price-display');
+  const minusBtn = document.getElementById('qty-minus');
+  const plusBtn = document.getElementById('qty-plus');
+  const buyBtn = document.getElementById('buy-btn');
+  const toast = document.getElementById('toast');
+  let qty = 1;
+
+  function fmt(pence){
+    return '£' + (pence/100).toFixed(2);
+  }
+  function render(){
+    qtyDisplay.textContent = qty;
+    priceDisplay.textContent = fmt(PRICE_PENCE * qty);
+    minusBtn.disabled = qty <= 1;
+    plusBtn.disabled = qty >= MAX_QTY;
+  }
+  function showToast(msg){
+    toast.textContent = msg;
+    toast.classList.add('show');
+    clearTimeout(showToast._t);
+    showToast._t = setTimeout(()=>toast.classList.remove('show'), 4000);
+  }
+
+  const params = new URLSearchParams(window.location.search);
+  if (params.get('checkout') === 'success') {
+    setTimeout(()=>showToast('Thank you — your sambal is on its way. Check your inbox for the receipt.'), 400);
+    history.replaceState({}, '', window.location.pathname + window.location.hash);
+  } else if (params.get('checkout') === 'cancelled') {
+    setTimeout(()=>showToast('Checkout cancelled — your jar is still waiting.'), 400);
+    history.replaceState({}, '', window.location.pathname + window.location.hash);
+  }
+
+  minusBtn.addEventListener('click', ()=>{ if(qty>1){qty--;render();} });
+  plusBtn.addEventListener('click', ()=>{ if(qty<MAX_QTY){qty++;render();} });
+
+  buyBtn.addEventListener('click', async ()=>{
+    const original = buyBtn.textContent;
+    buyBtn.disabled = true;
+    buyBtn.textContent = 'Opening Stripe…';
+    try {
+      const res = await fetch('/.netlify/functions/checkout', {
+        method:'POST',
+        headers:{'Content-Type':'application/json'},
+        body: JSON.stringify({ quantity: qty })
+      });
+      const data = await res.json();
+      if (!res.ok || !data.url) throw new Error(data.error || 'Could not start checkout');
+      window.location.href = data.url;
+    } catch (err) {
+      console.error(err);
+      showToast(err.message || 'Something went wrong. Try again in a moment.');
+      buyBtn.disabled = false;
+      buyBtn.textContent = original;
+    }
+  });
+
+  render();
+})();
+</script>
+
+</body>
+</html>
