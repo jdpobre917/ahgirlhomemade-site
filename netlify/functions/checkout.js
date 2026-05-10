@@ -5,7 +5,7 @@ const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 const PRODUCT = {
   name: 'Ah Girl Homemade Sambal',
   description: '200g jar — authentic Malaysian chilli paste',
-  unit_amount: 850,           // £8.50 in pence
+  unit_amount: 650,           // £6.50 in pence
   image_path: '/assets/jar.jpg',
 };
 const SHIPPING_COST_PENCE = 395;
